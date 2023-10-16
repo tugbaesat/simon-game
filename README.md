@@ -6,7 +6,7 @@ This is an online Simon Game which is an exciting electronic game of lights and 
 
 ## Live Demo of the Project: 📹
 
-[Simon Game](https://clipboard-landing-page-challenge.vercel.app)
+[Simon Game](https://simon-game-tugbaesat.vercel.app)
 
 ## Technologies, Frameworks and Libraries: ☕️ 🐍 ⚛️
 - HTML
@@ -16,9 +16,9 @@ This is an online Simon Game which is an exciting electronic game of lights and 
 
 ## Screenshots: 📷
 
-### Main Page
-![image](https://github.com/tugbaesat/clipboard-landing-page-challenge/assets/114342008/998cd559-446b-4485-ace5-2b780e2dd5e3)
-
+![image](https://github.com/tugbaesat/simon-game/assets/114342008/860107c3-5623-4ad4-ab33-b954a11ad3c9)
+![image](https://github.com/tugbaesat/simon-game/assets/114342008/9815bef5-5125-453e-bece-97f502c943bc)
+![image](https://github.com/tugbaesat/simon-game/assets/114342008/5c2df302-e7f5-414c-93d7-1d6df74042c7)
 
 ## Authors: 💻
 [@tugbaesat](https://github.com/tugbaesat)
