@@ -1,22 +1,22 @@
-var gamePattern = [];
-var userClickedPattern = [];
-var buttonColours = ["red", "blue", "green", "yellow"];
+let gamePattern = [];
+let userClickedPattern = [];
+let buttonColours = ["red", "blue", "green", "yellow"];
 
-var level = 0;
-var currentLevel = level;
+let level = 0;
+let currentLevel = level;
 
-var started = false;
+let started = false;
 
-$(document).keydown(function () {
+function play() {
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
   }
-});
+}
 
 $(".btn").click(function () {
-  var userChosenColour = $(this).attr("id");
+  let userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
   playSound(userChosenColour);
   animatePress(userChosenColour);
@@ -27,12 +27,12 @@ function nextSequence() {
   userClickedPattern = [];
 
   level++;
-  $("h1").text("Level " + level);
-  $("#text-part h2, #text-part p").addClass("hidden");
+  $("#text-part h2").text("Level " + level);
+  $("#text-part p, #text-part button").addClass("hidden");
 
-  var randomNumber = Math.random();
+  let randomNumber = Math.random();
   randomNumber = Math.floor(randomNumber * 4);
-  var randomChosenColour = buttonColours[randomNumber];
+  let randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
   $("#" + randomChosenColour)
     .fadeIn(100)
@@ -50,7 +50,7 @@ function checkAnswer(currentLevel) {
       }, 1000);
     }
   } else {
-    var wrongCase = "wrong";
+    let wrongCase = "wrong";
     playSound(wrongCase);
     $("body").addClass("game-over");
 
@@ -58,7 +58,9 @@ function checkAnswer(currentLevel) {
       $("body").removeClass("game-over");
     }, 200);
 
-    $("#text-part h1").text("Game Over, Press Any Key to Restart");
+    $("#text-part h2").text("GAME OVER!");
+    $("#text-part p").text("Press Play to Restart");
+    $("#text-part button, #text-part P").removeClass("hidden");
     startOver();
   }
 }
@@ -73,23 +75,23 @@ function startOver() {
 function playSound(name) {
   switch (name) {
     case "blue":
-      var blue = new Audio("sounds/blue.mp3");
+      let blue = new Audio("sounds/blue.mp3");
       blue.play();
       break;
     case "green":
-      var green = new Audio("sounds/green.mp3");
+      let green = new Audio("sounds/green.mp3");
       green.play();
       break;
     case "red":
-      var red = new Audio("sounds/red.mp3");
+      let red = new Audio("sounds/red.mp3");
       red.play();
       break;
     case "yellow":
-      var yellow = new Audio("sounds/yellow.mp3");
+      let yellow = new Audio("sounds/yellow.mp3");
       yellow.play();
       break;
     case "wrong":
-      var wrong = new Audio("sounds/wrong.mp3");
+      let wrong = new Audio("sounds/wrong.mp3");
       wrong.play();
       break;
 
